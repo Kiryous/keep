@@ -91,7 +91,6 @@ POSTHOG_API_ENABLED = os.environ.get("ENABLE_POSTHOG_API", "false") == "true"
 # Monkey patch requests to disable redirects
 original_request = requests.Session.request
 
-
 def no_redirect_request(self, method, url, **kwargs):
     kwargs["allow_redirects"] = False
     return original_request(self, method, url, **kwargs)
