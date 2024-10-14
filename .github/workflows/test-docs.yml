@@ -18,7 +18,7 @@ env:
 
 jobs:
   tests-docs:
-    runs-on: ubuntu-latest
+    runs-on: namespace-profile-cached
 
     steps:
       - name: Checkout
@@ -61,4 +61,3 @@ jobs:
           ./docs_validate_navigation.sh;
 
           # Todo: validate if openapi schema is matching with the code
-  
