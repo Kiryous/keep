@@ -5,7 +5,7 @@ on:
 
 jobs:
   release:
-    runs-on: namespace-profile-default
+    runs-on: namespace-profile-cached
     concurrency: release
     permissions:
       id-token: write
